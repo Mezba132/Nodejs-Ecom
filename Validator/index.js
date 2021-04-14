@@ -11,7 +11,7 @@ exports.userSignupValidator = (req, res, next) => {
     req.check("password", "Password is required").notEmpty()
     req.check("password")
         .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/)
-        .withMessage("Passowrd length must be 4 and at least one character and one number")
+        .withMessage("Passowrd length must be 4 and at least need one character and one number")
         .isLength({
             min:4,
             max:50
